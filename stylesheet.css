@@ -1,0 +1,17 @@
+body {
+    font-family: arial;
+    font-size: 12px;
+    background-color: lightslategray;
+}
+
+form {
+    background-color: white;
+}
+
+#start_form {
+    padding: 10px;
+}
+
+#end_form {
+    padding: 10px;
+}
