@@ -15,3 +15,15 @@ form {
 #end_form {
     padding: 10px;
 }
+
+.fizz {
+    color: saddlebrown;
+}
+
+.buzz {
+    color: orange;
+}
+
+.fizzbuzz {
+    color: red;
+}
