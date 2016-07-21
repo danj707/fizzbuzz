@@ -26,21 +26,28 @@ function getValues() {
     });
 };
 
-//for loop testing the modulus for each increment from start to end
 function fizzBuzz(fizzbuzzStart, fizzbuzzEnd) {
-    for (i = fizzbuzzStart; i <= fizzbuzzEnd; i++) {
-        if ((i % 3 == 0) && (i % 5 == 0)) {
-            //first check both
-            $('body').append('<p class="fizzbuzz">' + i + ' :fizzbuzz</p>')
-        } else if (i % 3 == 0) {
-            //then check 3
-            $('body').append('<p class="fizz">' + i + ' : fizz</p>')
-        } else if (i % 5 == 0) {
-            //then check 5
-            $('body').append('<p class="buzz">' + i + ' : buzz</p>')
-        } else {
-            //else must not be mod either, print number
-            $('body').append('<p>' + i + '</p>')
+    for (i = 1; i <= 100; i++) {
+        var content = '<p> ' + i + ' </p>';
+        if (i % 3 == 0) {
+            //check 3
+            content = '<p class="fizz">' + i + ' : fizz</p>';
         }
+        if (i % 5 == 0) {
+            //then check 5
+            content = '<p class="buzz">' + i + ' : buzz</p>';
+        }
+        if ((i % 3 == 0) && (i % 5 == 0)) {
+            //finally check for both
+            content = '<p class="fizzbuzz">' + i + ' :fizzbuzz</p>';
+        }
+        $('body').append(content);
     }
-};
+}
+
+/*super advanced*/
+//    for (i = 1; i <= 100; i++) {
+//    var content = "";
+//    if (i % 3 == 0) content += 'fizz';
+//    if (i % 5 == 0) content += 'buzz';
+//    $('body').append('<p> ' + (content || i) + ' </p>');
